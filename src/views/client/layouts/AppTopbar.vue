@@ -1,7 +1,7 @@
 <template>
     <div :class="{ 'bg-primary ': isScrolled }" class="h-32 w-full drop-shadow-md flex flex-col gap-1 z-50 sticky top-0">
         <div class="mx-auto h-full container w-full items-center flex justify-between gap-3">
-            <img class="w-auto h-10" src="../../../assets/img/logo.avif" alt="" />
+            <img class="w-auto h-10" src="../../../assets/img/logohoangay.png" alt="" />
             <div class="w-[500px]">
                 <AutoComplete
                     v-model="value"
@@ -74,10 +74,10 @@
     </div>
 </template>
 <script setup>
+import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import Carts from '../components/Carts.vue';
 import LoginModal from '../components/LoginModal.vue';
-import { ref, onMounted } from 'vue';
 const router = useRouter();
 onMounted(() => {
     window.addEventListener('scroll', handleScroll);
@@ -89,7 +89,7 @@ const handleScroll = () => {
     isScrolled.value = window.scrollY > 50;
 };
 </script>
-<style >
+<style>
 .hover-underline-animation {
     display: inline-block;
     position: relative;
